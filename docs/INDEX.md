@@ -55,7 +55,7 @@ Documentation files:
 </vehicle>
 ```
 
-Process one single input fillUnit and split the value into multiple output fillUnits. This specialization supports multiple discharge nodes vs base game which only supports 1.
+Process one single input fillUnit and split the value into multiple output fillUnits. This specialization supports multiple simultaneous active discharge nodes vs base game which only supports 1.
 
 For implementing a Split Processor [read more here](./PROCESSOR_SPLIT.md).
 
