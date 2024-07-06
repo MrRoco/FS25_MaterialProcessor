@@ -1,0 +1,122 @@
+---@meta
+
+---@class VehicleObject : Vehicle, FillUnit, FillVolume, TurnOnVehicle
+---@field getIsTurnedOn fun(): boolean
+---@field setDashboardsDirty fun(): boolean
+---@field setMovingToolDirty fun()
+---@field getMountObject fun(): Vehicle | nil
+---@field getDynamicMountObject fun(): Vehicle | nil
+VehicleObject = {}
+
+---@class Parent
+---@field components table
+---@field i3dMappings table
+---@field baseDirectory string
+
+---@class FillUnitObject
+---@field fillUnitIndex number
+---@field fillLevel number
+---@field fillLevelSent number
+---@field fillType number
+---@field fillTypeSent number
+---@field lastValidFillType number
+---@field lastValidFillTypeSent number
+---@field startFillLevel number | nil -- Only set if startFillTypeIndex is not nil
+---@field startFillTypeIndex number | nil
+---@field capacity number
+---@field defaultCapacity number
+---@field supportedFillTypes table<number, boolean>
+---@field supportedToolTypes table<number, boolean>
+---@field needsSaving boolean
+---@field exactFillRootNode number | nil
+---@field fillRootNode number
+---@field ignoreFillLimit boolean
+---@field synchronizeFillLevel boolean
+---@field synchronizeFullFillLevel boolean
+---@field synchronizationNumBits number
+---@field fillAnimation string | nil
+---@field fillAnimationLoadTime number | nil -- Float
+---@field fillAnimationEmptyTime number | nil -- Float
+---@field fillLevelAnimationName string | nil
+---@field fillLevelAnimationResetOnEmpty boolean
+---@field fillPlane table | nil -- Client only
+---@field lastFillPlaneType number | nil -- Client only
+---@field fillEffects table -- Client only
+---@field animationNodes table -- Client only
+FillUnitObject = {}
+
+---@class DischargeInfo
+---@field node number | nil
+---@field width number
+---@field length number
+---@field zOffset number
+---@field yOffset number
+---@field limitToGround boolean
+---@field useRaycastHitPosition boolean
+
+---@class DischargeRaycast
+---@field node number | nil
+---@field useWorldNegYDirection boolean
+---@field yOffset number
+
+---@class DischargeTrigger
+---@field node number | nil
+---@field objects table<FillUnit, table>
+---@field numObjects number
+
+---@class DischargeNodeProperties
+---@field effectTurnOffThreshold number
+---@field lineOffset number
+---@field litersToDrop number
+---@field emptySpeed number
+---@field toolType number
+---@field maxDistance number
+---@field info DischargeInfo
+---@field raycast DischargeRaycast
+---@field trigger DischargeTrigger
+---@field activationTrigger DischargeTrigger
+---@field effects table
+---@field playSound boolean
+---@field soundNode number | nil
+---@field dischargeSample table | nil
+---@field dischargeStateSamples table
+---@field animationNodes table
+---
+---@field distanceObjectChanges table
+---@field distanceObjectChangeThreshold number
+---@field stateObjectChanges table
+---@field nodeActiveObjectChanges table
+---@field currentDischargeState number
+---@field sample table | nil
+---@field unloadInfoIndex number
+---
+---@field dischargeObject FillUnit | nil
+---@field dischargeHit boolean
+---@field dischargeHitObject table | nil
+---@field dischargeHitObjectUnitIndex number | nil
+---@field dischargeHitTerrain boolean
+---@field dischargeDistance number
+---@field dischargeDistanceSent number
+---@field sentHitDistance number
+---@field dischargeFillUnitIndex number | nil
+---@field lastDischargeObject any
+---@field isAsyncRaycastActive boolean | nil
+---@field isEffectActive boolean
+---@field isEffectActiveSent boolean
+---@field stopEffectTime number | nil
+---@field lastEffect table | nil
+---@field currentDischargeObject table | nil
+---@field stopDischargeIfNotPossible boolean
+
+---@class TableElementRow
+---@field dataRowIndex number
+---@field rowElement GuiElement
+---@field columnElements table<string, table>
+
+---@class TableElementDataRow<Data>: { itemData: Data, id: number, columnNames: table<string, TableElementDataCell>, columnCells: table<string, table> }
+
+---@class TableElementDataCell
+---@field text string
+---@field overrideProfileName string
+---@field profileName string
+---@field isVisible boolean

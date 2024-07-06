@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement type="empty" profile="newLayer" />
+    <GuiElement type="bitmap" profile="mProcessor_dialogFullscreenBackground" />
+    <GuiElement type="bitmap" profile="bgVignette" />
+    <GuiElement type="bitmap" profile="bgGlowDialog" />
+
+    <GuiElement type="bitmap" id="dialogElement" profile="mProcessor_dialog">
+        <GuiElement type="bitmap" profile="mProcessor_dialogStripesBarLeft" />
+        <GuiElement type="bitmap" profile="mProcessor_dialogStripesBarRight" />
+
+        <GuiElement type="empty" profile="mProcessor_dialogHeader">
+            <GuiElement type="text" profile="mProcessor_dialogHeaderTitle" id="dialogTitle" text="Title" />
+        </GuiElement>
+
+        <GuiElement type="bitmap" profile="mProcessor_areaDialogContent">
+            <GuiElement type="bitmap" profile="mProcessor_dialogTopShadow" />
+            <GuiElement type="bitmap" profile="mProcessor_dialogBottomShadow" />
+
+            <GuiElement
+                type="smoothList"
+                id="list"
+                profile="mProcessor_dialogList"
+                focusInit="onOpen"
+                onDoubleClick="onItemDoubleClick"
+                focusChangeLeft="unitsList"
+                focusChangeRight="nil"
+                focusChangeTop="nil"
+                focusChangeBottom="nil"
+            >
+                <GuiElement type="listItem" profile="mProcessor_dialogListItem">
+                    <GuiElement type="bitmap" name="image" profile="mProcessor_dialogListItemImage" />
+                    <GuiElement type="text" name="title" profile="mProcessor_dialogListItemTitle" />
+                    <GuiElement type="text" name="text" profile="mProcessor_dialogListItemText" text="Crushed Stone" />
+                    <GuiElement type="text" name="info" profile="mProcessor_dialogListItemInfo" text="300 l/s" />
+                </GuiElement>
+            </GuiElement>
+
+            <GuiElement type="threePartBitmap" profile="mProcessor_dialogListVerticalSlider">
+                <GuiElement type="slider" profile="mProcessor_dialogListVerticalSliderBar" dataElementId="list" handleFocus="false" />
+            </GuiElement>
+        </GuiElement>
+
+        <GuiElement type="flowLayout" profile="mProcessor_dialogActionBox">
+            <GuiElement type="button" profile="mProcessor_dialogActionButtonBack" text="$l10n_button_back" onClick="onClickBack" id="backButton" />
+            <GuiElement type="button" profile="mProcessor_dialogActionButtonToggleHud" text="$l10n_action_disableHud" onClick="onClickToggleHud" id="toggleHudButton" />
+            <GuiElement type="button" profile="mProcessor_dialogActionButtonApply" text="$l10n_button_apply" onClick="onClickApply" id="applyButton" />
+        </GuiElement>
+    </GuiElement>
+
+    <GuiElement type="bitmap" profile="mProcessor_dialogUnitsFrame">
+        <GuiElement type="text" id="dialogUnitsTitle" profile="mProcessor_dialogUnitsTitle" text="Units" />
+        <GuiElement
+            type="smoothList"
+            id="unitsList"
+            profile="mProcessor_dialogUnitsList"
+            focusChangeRight="list"
+            focusChangeLeft="nil"
+            focusChangeTop="nil"
+            focusChangeBottom="nil"
+            selectedWithoutFocus="false"
+        >
+            <GuiElement type="listItem" profile="mProcessor_dialogUnitsListItem">
+                <GuiElement type="bitmap" name="image" profile="mProcessor_dialogUnitsListItemImage" />
+                <GuiElement type="text" name="title" profile="mProcessor_dialogUnitsListItemTitle" />
+                <GuiElement type="text" name="ratio" profile="mProcessor_dialogUnitsListItemRatio" />
+            </GuiElement>
+        </GuiElement>
+    </GuiElement>
+</GUI>

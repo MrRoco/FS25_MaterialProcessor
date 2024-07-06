@@ -1,0 +1,183 @@
+{
+    "colorSchemes": [
+        {
+            // Default color scheme
+            "name": "light",
+            "white": "1 1 1",
+            "black": "0 0 0"
+        }
+    ],
+    "variables": [
+        {
+            "name": "white",
+            "value": "1 1 1"
+        },
+        {
+            "name": "black",
+            "value": "0 0 0"
+        },
+        // Primary theme color
+        {
+            "name": "primary",
+            "value": "0.3 0.1 0.1"
+        },
+        {
+            "name": "mainColor",
+            "value": "0.0227 0.5346 0.8519 1.0"
+        },
+        // Secondary theme color
+        {
+            "name": "secondary",
+            "value": "0.3 0.1 0.1"
+        },
+        // Text color
+        {
+            "name": "text",
+            "value": "1 1 1"
+        },
+        {
+            "name": "textHighlighted",
+            "value": "1 1 1"
+        },
+        {
+            "name": "textSelected",
+            "value": "$ref_primary"
+        },
+        {
+            "name": "textDisabled",
+            "value": "$ref_text 0.35"
+        },
+        // Button color
+        {
+            "name": "button",
+            "value": "0 0 0"
+        },
+        {
+            "name": "buttonFocused",
+            "value": "$ref_primary"
+        },
+        {
+            "name": "buttonHighlighted",
+            "value": "$ref_primary"
+        },
+        {
+            "name": "buttonDisabled",
+            "value": "0 0 0"
+        },
+        // Button text
+        {
+            "name": "buttonText",
+            "value": "$ref_text"
+        },
+        {
+            "name": "buttonTextFocused",
+            "value": "$ref_text"
+        },
+        {
+            "name": "buttonTextSelected",
+            "value": "$ref_text"
+        },
+        {
+            "name": "buttonTextHighlighted",
+            "value": "$ref_textHighlighted"
+        },
+        {
+            "name": "buttonTextDisabled",
+            "value": "$ref_textDisabled"
+        },
+        // Dialog
+        {
+            "name": "dialogFullscreenBackground",
+            // "value": "0 0 0 0.5"
+            "value": "0.013 0.013 0.013 0.97"
+        },
+        {
+            "name": "dialogElement",
+            "value": "$ref_secondary"
+        },
+        {
+            "name": "dialogShadow",
+            "value": "$ref_black 0.4"
+        },
+        {
+            "name": "unitsFrameColor",
+            "value": "$ref_secondary"
+        },
+        // Stripes bar
+        {
+            "name": "stripesBar",
+            "value": "$ref_primary"
+        },
+        // Slider element
+        {
+            "name": "slider",
+            "value": "$ref_stripesBar"
+        },
+        {
+            "name": "sliderBar",
+            "value": "$ref_stripesBar"
+        },
+        // Action buttons
+        {
+            "name": "actionButton",
+            "value": "$ref_primary"
+        },
+        {
+            "name": "actionButtonIcon",
+            "value": "$ref_primary"
+        },
+        // HUD
+        {
+            "name": "hudBackgroundColor",
+            // "value": "0 0 0 0.95"
+            "value": "0.014 0.178 0.06 0.95"
+        },
+        {
+            "name": "hudDisabledBackgroundColor",
+            "value": "0.01 0.141 0.223 0.95"
+        },
+        {
+            "name": "hudDisabledTextColor",
+            "value": "0.8 0.8 0.8 1"
+        },
+        {
+            "name": "hudTitleColor",
+            "value": "#7DD8A5"
+        },
+        {
+            "name": "hudTitleDisabledColor",
+            "value": "#91D5EA"
+        },
+        {
+            "name": "hudTextColor",
+            "value": "1 1 1 1"
+        },
+        {
+            "name": "hudTextDisabledColor",
+            "value": "1 1 1 1"
+        },
+        // List
+        {
+            "name": "listItemText",
+            "value": "$ref_buttonText"
+        },
+        {
+            "name": "listItemTextSelected",
+            "value": "$ref_textHighlighted"
+        },
+        {
+            "name": "listItemTextDisabled",
+            "value": "#bd4f4b"
+        }
+    ],
+    "themes": [
+        {
+            "id": "default",
+            "name": "Default",
+            // "primary": "0.0227 0.5346 0.8519",
+            // "primary": "#1A6982", dark background tmp
+            "primary": "#2ec0ed",
+            "secondary": "#273842"
+        }
+    ]
+}

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<GUIProfiles>
+    <Profile name="mProcessor_button" extends="baseReference">
+        <Value name="size" value="316px 48px" />
+        <Value name="position" value="0 0" />
+        <Value name="margin" value="0" />
+        <Value name="handleFocus" value="true" />
+        <Value name="textBold" value="false" />
+        <Value name="textMaxWidth" value="290px" />
+        <Value name="textAlignment" value="center" />
+        <Value name="textUpperCase" value="true" />
+        <Value name="textVerticalAlignment" value="middle" />
+        <Value name="textSize" value="16px" />
+        <Value name="textColor" value="1 1 1 1" />
+        <Value name="textFocusedColor" value="1 1 1 1" />
+        <Value name="textSelectedColor" value="1 1 1 1" />
+        <Value name="textHighlightedColor" value="1 1 1 1" />
+        <Value name="imageColor" value="0 0 0 0.5" />
+        <Value name="imageDisabledColor" value="0 0 0 0.1" />
+        <Value name="imageFocusedColor" value="0.0273 0.5271 0.8469 0.35" />
+        <Value name="imageHighlightedColor" value="0.0273 0.5271 0.8469 0.5" />
+    </Profile>
+    <Profile name="mProcessor_actionButton" extends="mProcessor_button">
+        <Value name="size" value="316px 32px" />
+        <Value name="handleFocus" value="false" />
+        <Value name="fitToContent" value="true" />
+        <Value name="fitExtraWidth" value="32px" />
+        <Value name="iconFilename" value="g_baseUIFilename" />
+        <Value name="iconUVs" value="$preset_keyBoardKeyUVs" />
+        <Value name="iconSize" value="28px 28px" />
+        <Value name="iconTextOffset" value="-8px 0" />
+        <Value name="iconColor" value="0.0273 0.5271 0.8469 0.5" />
+        <Value name="iconFocusedColor" value="0.0273 0.5271 0.8469 1" />
+        <Value name="iconSelectedColor" value="0.0273 0.5271 0.8469 1" />
+        <Value name="iconHighlightedColor" value="0.0273 0.5271 0.8469 0.8" />
+        <Value name="iconDisabledColor" value="0 0 0 0.4" />
+        <Value name="imageColor" value="0 0 0 0" />
+        <Value name="imageFocusedColor" value="0 0 0 0" />
+        <Value name="imageSelectedColor" value="0 0 0 0" />
+        <Value name="imageHighlightedColor" value="0 0 0 0" />
+        <Value name="textSize" value="14px" />
+        <Value name="textBold" value="true" />
+        <Value name="textAlignment" value="left" />
+        <Value name="textMaxNumLines" value="1" />
+        <Value name="textAutoWidth" value="true" />
+        <Value name="textColor" value="0.0273 0.5271 0.8469 0.5" />
+        <Value name="textFocusedColor" value="0.0273 0.5271 0.8469 1" />
+        <Value name="textSelectedColor" value="0.0273 0.5271 0.8469 1" />
+        <Value name="textHighlightedColor" value="0.0273 0.5271 0.8469 0.8" />
+        <Value name="textDisabledColor" value="0 0 0 0.4" />
+    </Profile>
+    <Profile name="mProcessor_dialogFullscreenBackground" extends="dialogFullscreenBg">
+        <Value name="imageColor" value="0.013 0.013 0.013 0.97" />
+    </Profile>
+    <Profile name="mProcessor_stripesBarLeft" with="anchorMiddleLeft">
+        <Value name="size" value="28px 1024px" />
+        <Value name="position" value="8px 0" />
+        <Value name="imageFilename" value="g_materialProcessorUIFilename" />
+        <Value name="imageUVs" value="0 992px 1024px 32px" />
+        <Value name="imageColor" value="0.0273 0.5271 0.8469 0.1" />
+        <Value name="imageUVRotation" value="90" />
+    </Profile>
+    <Profile name="mProcessor_stripesBarRight" extends="mProcessor_stripesBarLeft" with="anchorMiddleRight">
+        <Value name="position" value="-8px 0" />
+    </Profile>
+    <Profile name="mProcessor_dialog" extends="baseReference" with="anchorMiddleCenter">
+        <Value name="size" value="600px 720px" />
+        <Value name="imageColor" value="0.0203 0.0395 0.0545 1" />
+    </Profile>
+    <Profile name="mProcessor_dialogStripesBarLeft" extends="mProcessor_stripesBarLeft">
+        <Value name="size" value="20px 704px" />
+    </Profile>
+    <Profile name="mProcessor_dialogStripesBarRight" extends="mProcessor_stripesBarRight">
+        <Value name="size" value="20px 704px" />
+    </Profile>
+    <Profile name="mProcessor_dialogHeader" with="anchorTopCenter">
+        <Value name="size" value="420px 58px" />
+    </Profile>
+    <Profile name="mProcessor_dialogHeaderTitle" extends="textDefault" with="anchorBottomCenter">
+        <Value name="size" value="316px 32px" />
+        <Value name="position" value="0" />
+        <Value name="textColor" value="0.0273 0.5271 0.8469 1" />
+        <Value name="textSize" value="24px" />
+        <Value name="textBold" value="false" />
+        <Value name="textAutoWidth" value="true" />
+        <Value name="textUpperCase" value="true" />
+        <Value name="textAlignment" value="center" />
+    </Profile>
+    <Profile name="mProcessor_areaDialogContent" extends="emptyPanel" with="anchorMiddleCenter">
+        <Value name="size" value="440px 560px" />
+    </Profile>
+    <Profile name="mProcessor_dialogTopShadow">
+        <Value name="anchors" value="-0.05 1.05 1 1" />
+        <Value name="size" value="100px 16px" />
+        <Value name="position" value="0 0" />
+        <Value name="anchors" value="0 1 1 1" />
+        <Value name="imageUVs" value="0 936px 1024px 56px" />
+        <Value name="imageColor" value="0 0 0 0.4" />
+        <Value name="imageFilename" value="g_materialProcessorUIFilename" />
+    </Profile>
+    <Profile name="mProcessor_dialogBottomShadow" extends="mProcessor_dialogTopShadow">
+        <Value name="anchors" value="-0.05 1.05 0 0" />
+        <Value name="imageUVRotation" value="180" />
+    </Profile>
+    <Profile name="mProcessor_dialogList" extends="list" with="anchorBottomRight">
+        <Value name="size" value="440px 560px" />
+        <Value name="isHorizontalList" value="false" />
+        <Value name="selectedWithoutFocus" value="true" />
+        <Value name="listItemSpacing" value="2px" />
+    </Profile>
+    <Profile name="mProcessor_dialogListItem" extends="listItem">
+        <Value name="size" value="440px 48px" />
+        <Value name="imageColor" value="$preset_colorListRowBackground" />
+        <Value name="imageFocusedColor" value="0.0227 0.5346 0.8519 0.1" />
+        <Value name="imageSelectedColor" value="0.0227 0.5346 0.8519 0.1" />
+    </Profile>
+    <Profile name="mProcessor_dialogListItemImage" with="anchorMiddleLeft">
+        <Value name="size" value="48px 48px" />
+        <Value name="imageColor" value="1 1 1 1" />
+        <Value name="imageUVs" value="0 0 1 1" />
+    </Profile>
+    <Profile name="mProcessor_dialogListItemTitle" extends="textDefault" with="anchorMiddleLeft">
+        <Value name="size" value="300px 32px" />
+        <Value name="position" value="64px 8px" />
+        <Value name="textSize" value="14px" />
+        <Value name="textColor" value="1 1 1 1" />
+        <Value name="textSelectedColor" value="1 1 1 1" />
+        <Value name="textAutoWidth" value="true" />
+    </Profile>
+    <Profile name="mProcessor_dialogListItemText" extends="textDefault" with="anchorMiddleLeft">
+        <Value name="size" value="300px 32px" />
+        <Value name="position" value="64px -8px" />
+        <Value name="textSize" value="12px" />
+        <Value name="textColor" value="1 1 1 0.4" />
+        <Value name="textSelectedColor" value="1 1 1 1" />
+        <Value name="textAutoWidth" value="true" />
+    </Profile>
+    <Profile name="mProcessor_dialogListItemInfo" extends="textDefault" with="anchorMiddleRight">
+        <Value name="size" value="300px 32px" />
+        <Value name="position" value="-16px 0" />
+        <Value name="textSize" value="12px" />
+        <Value name="textAlignment" value="right" />
+        <Value name="textColor" value="1 1 1 0.4" />
+        <Value name="textSelectedColor" value="1 1 1 1" />
+        <Value name="textAutoWidth" value="true" />
+    </Profile>
+    <Profile name="mProcessor_dialogUnitsFrame" extends="baseReference" with="anchorTopRight">
+        <Value name="size" value="378px 1.0" />
+        <Value name="imageColor" value="0.0203 0.0395 0.0545 1" />
+    </Profile>
+    <Profile name="mProcessor_dialogUnitsTitle" extends="textDefault" with="anchorTopCenter">
+        <Value name="position" value="0 -16px" />
+        <Value name="textAutoWidth" value="true" />
+        <Value name="textColor" value="1 1 1 1" />
+        <Value name="textSize" value="24px" />
+        <Value name="textBold" value="false" />
+    </Profile>
+    <Profile name="mProcessor_dialogUnitsList" extends="list" with="anchorTopCenter">
+        <Value name="size" value="346px 640px" />
+        <Value name="position" value="0 -64px" />
+        <Value name="isHorizontalList" value="false" />
+        <Value name="selectedWithoutFocus" value="true" />
+        <Value name="soundDisabled" value="true" />
+        <Value name="listItemSpacing" value="2px" />
+    </Profile>
+    <Profile name="mProcessor_dialogUnitsListItem" extends="listItem">
+        <Value name="size" value="346px 48px" />
+        <Value name="imageColor" value="$preset_colorListRowBackground" />
+        <Value name="imageFocusedColor" value="0.0227 0.5346 0.8519 0.1" />
+        <Value name="imageSelectedColor" value="0.0227 0.5346 0.8519 0.1" />
+    </Profile>
+    <Profile name="mProcessor_dialogUnitsListItemImage" with="anchorMiddleLeft">
+        <Value name="size" value="32px 32px" />
+        <Value name="position" value="8px 0" />
+        <Value name="imageColor" value="1 1 1 1" />
+        <Value name="imageUVs" value="0 0 1 1" />
+    </Profile>
+    <Profile name="mProcessor_dialogUnitsListItemTitle" extends="textDefault" with="anchorMiddleLeft">
+        <Value name="size" value="240px 24px" />
+        <Value name="position" value="56px 0" />
+        <Value name="textSize" value="14px" />
+        <Value name="textColor" value="1 1 1 1" />
+        <Value name="textSelectedColor" value="1 1 1 1" />
+        <Value name="textAutoWidth" value="true" />
+    </Profile>
+    <Profile name="mProcessor_dialogUnitsListItemRatio" extends="textDefault" with="anchorMiddleRight">
+        <Value name="size" value="240px 24px" />
+        <Value name="position" value="-16px 0" />
+        <Value name="textAlignment" value="right" />
+        <Value name="textSize" value="12px" />
+        <Value name="textColor" value="1 1 1 1" />
+        <Value name="textSelectedColor" value="1 1 1 1" />
+        <Value name="textAutoWidth" value="true" />
+    </Profile>
+    <Profile name="mProcessor_dialogListVerticalSlider" extends="verticalListSliderRightDocked" with="anchorTopRight">
+        <Value name="size" value="12px 560px" />
+        <Value name="imageColor" value="0.0273 0.5271 0.8469 0.1" />
+        <Value name="startImageColor" value="0.0273 0.5271 0.8469 0.1" />
+        <Value name="endImageColor" value="0.0273 0.5271 0.8469 0.1" />
+    </Profile>
+    <Profile name="mProcessor_dialogListVerticalSliderBar" extends="verticalListSliderBar" with="anchorMiddleCenter">
+        <Value name="size" value="6px 552px" />
+        <Value name="sliderImageColor" value="0.0273 0.5271 0.8469 0.1" />
+        <Value name="startImageColor" value="0.0273 0.5271 0.8469 0.1" />
+        <Value name="endImageColor" value="0.0273 0.5271 0.8469 0.1" />
+    </Profile>
+    <Profile name="mProcessor_dialogActionBox" extends="baseReference" with="anchorBottomLeft">
+        <Value name="size" value="640px 60px" />
+        <Value name="position" value="80px 8px" />
+        <Value name="alignmentX" value="left" />
+        <Value name="alignmentY" value="middle" />
+        <Value name="useFullVisibility" value="false" />
+        <Value name="autoValidateLayout" value="true" />
+        <Value name="imageColor" value="$preset_colorTransparent" />
+    </Profile>
+    <Profile name="mProcessor_dialogActionButtonBack" extends="mProcessor_actionButton">
+        <Value name="inputAction" value="MENU_BACK" />
+        <Value name="clickSound" value="BACK" />
+    </Profile>
+    <Profile name="mProcessor_dialogActionButtonApply" extends="mProcessor_actionButton">
+        <Value name="inputAction" value="MENU_ACCEPT" />
+        <Value name="clickSound" value="YES" />
+    </Profile>
+    <Profile name="mProcessor_dialogActionButtonToggleHud" extends="mProcessor_actionButton">
+        <Value name="inputAction" value="MENU_EXTRA_2" />
+        <Value name="clickSound" value="CONFIG_WRENCH" />
+    </Profile>
+    <Profile name="mProcessor_hudUnitRoot" extends="baseReference">
+        <Value name="size" value="176px 32px" />
+        <Value name="imageColor" value="0.014 0.178 0.06 0.95" />
+        <Value name="imageDisabledColor" value="0.01 0.141 0.223 0.95" />
+    </Profile>
+    <Profile name="mProcessor_hudUnitImage" with="anchorMiddleLeft">
+        <Value name="size" value="24px 24px" />
+        <Value name="position" value="4px 0" />
+        <Value name="imageColor" value="1 1 1 1" />
+        <Value name="imageUVs" value="0 0 1 1" />
+    </Profile>
+    <Profile name="mProcessor_hudUnitTitle" extends="textDefault" with="anchorMiddleLeft">
+        <Value name="size" value="136px 16px" />
+        <Value name="position" value="34px 6px" />
+        <Value name="textColor" value="0.2051 0.6867 0.3763 1" />
+        <Value name="textDisabledColor" value="0.2831 0.6654 0.8228 1" />
+        <Value name="textSize" value="9px" />
+        <Value name="textBold" value="false" />
+        <Value name="textMaxWidth" value="120px" />
+        <Value name="textAlignment" value="left" />
+        <Value name="textUpperCase" value="true" />
+    </Profile>
+    <Profile name="mProcessor_hudUnitText" extends="textDefault" with="anchorMiddleLeft">
+        <Value name="size" value="136px 16px" />
+        <Value name="position" value="34px -5px" />
+        <Value name="textSize" value="12px" />
+        <Value name="textBold" value="false" />
+        <Value name="textMaxWidth" value="120px" />
+        <Value name="textAlignment" value="left" />
+        <Value name="textUpperCase" value="false" />
+        <Value name="textColor" value="1 1 1 1" />
+        <Value name="textDisabledColor" value="1 1 1 1" />
+    </Profile>
+</GUIProfiles>

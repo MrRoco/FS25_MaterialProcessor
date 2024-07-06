@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<HUD>
+    <HudElement type="bitmap" id="root" onCreate="onCreateElement" profile="mProcessor_hudUnitRoot">
+        <!-- <HudElement type="boxLayout" profile="mProcessor_hudUnitLayout"> -->
+        <HudElement type="bitmap" id="image" onCreate="onCreateElement" profile="mProcessor_hudUnitImage" />
+        <HudElement type="text" id="title" onCreate="onCreateElement" profile="mProcessor_hudUnitTitle" />
+        <HudElement type="text" id="text" onCreate="onCreateElement" profile="mProcessor_hudUnitText" />
+        <!-- </HudElement> -->
+    </HudElement>
+</HUD>
