@@ -62,11 +62,8 @@ function SplitProcessorConfiguration:load(xmlFile, key)
 
     assert(#self.outputs > 0, string.format('Could not find any outputs: %s', key .. '.input'))
 
-    ---@diagnostic disable-next-line: cast-local-type
-    totalRatio = MathUtil.round(totalRatio, 2)
-
     if totalRatio ~= 1.0 then
-        Logging.xmlWarning(xmlFile, 'The total ratio of outputs (%.2f) does not add up to 1.0: %s', totalRatio, key .. '.input.output(?)')
+        Logging.xmlWarning(xmlFile, 'The total ratio of outputs (%s) does not add up to 1.0: %s', tostring(totalRatio), key .. '.input.output(?)')
     end
 end
 

@@ -62,8 +62,8 @@ function BlendProcessorConfiguration:load(xmlFile, key)
 
     assert(#self.inputs > 0, string.format('Could not find any inputs: %s', key))
 
-    if totalRatio ~= 1 then
-        Logging.xmlWarning(xmlFile, 'The total ratio of inputs does not add up to 1.0: %s', key .. '.output.input(?)')
+    if totalRatio ~= 1.0 then
+        Logging.xmlWarning(xmlFile, 'The total ratio of inputs (%s) does not add up to 1.0: %s', tostring(totalRatio), key .. '.output.input(?)')
     end
 end
 
