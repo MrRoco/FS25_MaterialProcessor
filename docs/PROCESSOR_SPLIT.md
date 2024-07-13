@@ -162,7 +162,7 @@ For more details on these look at the official documentation files for Vehicle.
         </configurations>
 
         <dischargeNodes>
-            <node node="dischargeNodeSideR" emptySpeed="100" fillUnitIndex="4" canDischargeToGround="true" canStartDischargeAutomatically="true" canStartGroundDischargeAutomatically="true" unloadInfoIndex="1">
+            <node node="dischargeNodeSideR" emptySpeed="100" fillUnitIndex="4" unloadInfoIndex="1">
                 <activationTrigger node="activationTriggerSideR" />
                 <raycast useWorldNegYDirection="true" />
                 <info width="0.5" length="0.5" />
@@ -172,7 +172,7 @@ For more details on these look at the official documentation files for Vehicle.
                 <dischargeStateSound template="augerBelt" pitchScale="0.7" volumeScale="1.4" fadeIn="0.2" fadeOut="1" innerRadius="1.0" outerRadius="40.0" linkNode="dischargeNodeSideR" />
             </node>
 
-            <node node="dischargeNodeFront" emptySpeed="1" fillUnitIndex="5" canDischargeToGround="true" canStartDischargeAutomatically="true" canStartGroundDischargeAutomatically="true" unloadInfoIndex="2">
+            <node node="dischargeNodeFront" emptySpeed="1" fillUnitIndex="5" unloadInfoIndex="2">
                 <activationTrigger node="activationTriggerFront" />
                 <raycast useWorldNegYDirection="true" />
                 <info width="0.5" length="0.5" />
