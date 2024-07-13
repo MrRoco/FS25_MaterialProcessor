@@ -368,7 +368,7 @@ function MaterialProcessor:onReadStream(streamId, connection)
 
     if connection:getIsServer() then
         self:setProcessorState(streamReadUIntN(streamId, Processor.SEND_NUM_BITS_STATE))
-        self:setProcessorConfigurationIndex(streamReadUIntN(streamId, Processor.SEND_NUM_BITS_INDEX))
+        self:setProcessorConfigurationIndex(streamReadUIntN(streamId, Processor.SEND_NUM_BITS_INDEX), true)
 
         spec.processor.canDischargeToGround = streamReadBool(streamId)
 
