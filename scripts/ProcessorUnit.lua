@@ -44,7 +44,7 @@ end
 ---@nodiscard
 function ProcessorUnit:load(xmlFile, key)
     self.hidden = xmlFile:getValue(key .. '#hidden', self.hidden)
-    self.ratio = xmlFile:getValue(key .. '#ratio', self.ratio)
+    self.ratio = MathUtil.round(xmlFile:getValue(key .. '#ratio', self.ratio), 4)
 
     local fillUnitIndex = xmlFile:getValue(key .. '#fillUnitIndex')
 
