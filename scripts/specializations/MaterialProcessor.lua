@@ -349,14 +349,12 @@ function MaterialProcessor:onWriteStream(streamId, connection)
     ---@type MaterialProcessorSpecialization
     local spec = self[MaterialProcessor.SPEC_NAME]
 
-    if not connection:getIsServer() then
-        streamWriteUIntN(streamId, spec.state, Processor.SEND_NUM_BITS_STATE)
-        streamWriteUIntN(streamId, spec.processor.configurationIndex, Processor.SEND_NUM_BITS_INDEX)
-        streamWriteBool(streamId, spec.processor.canDischargeToGround)
+    streamWriteUIntN(streamId, spec.state, Processor.SEND_NUM_BITS_STATE)
+    streamWriteUIntN(streamId, spec.processor.configurationIndex, Processor.SEND_NUM_BITS_INDEX)
+    streamWriteBool(streamId, spec.processor.canDischargeToGround)
 
-        for _, dischargeNode in ipairs(spec.processor.dischargeNodes) do
-            dischargeNode:writeStream(streamId, connection)
-        end
+    for _, dischargeNode in ipairs(spec.processor.dischargeNodes) do
+        dischargeNode:writeStream(streamId, connection)
     end
 end
 
@@ -366,15 +364,13 @@ function MaterialProcessor:onReadStream(streamId, connection)
     ---@type MaterialProcessorSpecialization
     local spec = self[MaterialProcessor.SPEC_NAME]
 
-    if connection:getIsServer() then
-        self:setProcessorState(streamReadUIntN(streamId, Processor.SEND_NUM_BITS_STATE))
-        self:setProcessorConfigurationIndex(streamReadUIntN(streamId, Processor.SEND_NUM_BITS_INDEX), true)
+    self:setProcessorState(streamReadUIntN(streamId, Processor.SEND_NUM_BITS_STATE))
+    self:setProcessorConfigurationIndex(streamReadUIntN(streamId, Processor.SEND_NUM_BITS_INDEX), true)
 
-        spec.processor.canDischargeToGround = streamReadBool(streamId)
+    spec.processor.canDischargeToGround = streamReadBool(streamId)
 
-        for _, dischargeNode in ipairs(spec.processor.dischargeNodes) do
-            dischargeNode:readStream(streamId, connection)
-        end
+    for _, dischargeNode in ipairs(spec.processor.dischargeNodes) do
+        dischargeNode:readStream(streamId, connection)
     end
 end
 
