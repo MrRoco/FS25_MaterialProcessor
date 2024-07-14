@@ -21,10 +21,6 @@ MaterialProcessor.ACTIONS = {
 }
 
 function MaterialProcessor.prerequisitesPresent(specializations)
-    if SpecializationUtil.hasSpecialization(Dischargeable, specializations) then
-        Logging.warning('MaterialProcessor.prerequisitesPresent() Vehicle has Dischargeable specialization, this can result in bugs/errors.')
-    end
-
     return SpecializationUtil.hasSpecialization(FillUnit, specializations)
 end
 

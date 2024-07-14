@@ -137,6 +137,10 @@ function Processor:load(xmlFile, key)
             end
         end
     end)
+
+    if #self.dischargeNodes > 0 and SpecializationUtil.hasSpecialization(Dischargeable, self.vehicle.specializations) then
+        Logging.xmlWarning(xmlFile, 'Vehicle has Dischargeable specialization, this can result in bugs/errors combined with processor dischargeNodes.')
+    end
 end
 
 ---@param xmlFile XMLFile
