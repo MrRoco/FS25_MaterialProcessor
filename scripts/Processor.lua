@@ -7,8 +7,6 @@
 ---@field dischargeNodes ProcessorDischargeNode[]
 ---@field fillUnitToDischargeNode table<number, ProcessorDischargeNode>
 ---@field nodeToDischargeNode table<number, ProcessorDischargeNode>
----@field registeredNodes table<number, boolean>
----@field registeredNodeFillUnits table<number, boolean>
 ---
 ---@field needsToBePoweredOn boolean
 ---@field needsToBeTurnedOn boolean
@@ -69,8 +67,6 @@ function Processor.new(vehicle, customMt)
     self.dischargeNodes = {}
     self.fillUnitToDischargeNode = {}
     self.nodeToDischargeNode = {}
-    self.registeredNodes = {}
-    self.registeredNodeFillUnits = {}
 
     self.forceSetFillType = true
     self.forceSetSupportedFillTypes = true
@@ -124,16 +120,14 @@ function Processor:load(xmlFile, key)
         local dischargeNode = ProcessorDischargeNode.new(nodeIndex, self)
 
         if dischargeNode:load(xmlFile, nodeKey) then
-            if self.registeredNodes[dischargeNode.node] ~= nil then
+            if self.nodeToDischargeNode[dischargeNode.node] ~= nil then
                 Logging.xmlError(xmlFile, 'Duplicate discharge node entry: %s', nodeKey)
-            elseif self.registeredNodeFillUnits[dischargeNode.fillUnitIndex] ~= nil then
+            elseif self.fillUnitToDischargeNode[dischargeNode.fillUnitIndex] ~= nil then
                 Logging.xmlError(xmlFile, 'Duplicate fillUnitIndex entry: %s', nodeKey)
             else
                 table.insert(self.dischargeNodes, dischargeNode)
                 self.nodeToDischargeNode[dischargeNode.node] = dischargeNode
                 self.fillUnitToDischargeNode[dischargeNode.fillUnitIndex] = dischargeNode
-                self.registeredNodes[dischargeNode.node] = true
-                self.registeredNodeFillUnits[dischargeNode.fillUnitIndex] = true
             end
         end
     end)
