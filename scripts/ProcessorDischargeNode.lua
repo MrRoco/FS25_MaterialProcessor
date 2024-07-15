@@ -610,7 +610,7 @@ function ProcessorDischargeNode:updateTick(dt, isActiveForInput, isActiveForInpu
 
             local isReadyForDischarge = self.lastEffect == nil or self.lastEffect:getIsFullyVisible()
 
-            if isReadyForDischarge and allowedToDischarge and canDischarge then
+            if isReadyForDischarge and isReadyToStartDischarge then
                 local emptyLiters = math.min(fillLevel, self.emptySpeed * dt)
                 local dischargedLiters, minDropReached, hasMinDropFillLevel = self:discharge(emptyLiters)
 

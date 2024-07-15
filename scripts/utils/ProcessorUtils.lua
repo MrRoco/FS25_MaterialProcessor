@@ -90,6 +90,8 @@ function ProcessorUtils.loadDischargeEffects(node, xmlFile, key)
         node.dischargeStateSamples = g_soundManager:loadSamplesFromXML(xmlFile, key, "dischargeStateSound", node.vehicle.baseDirectory, node.vehicle.components, 0, AudioGroup.VEHICLE, node.vehicle.i3dMappings, node.vehicle)
         node.animationNodes = g_animationManager:loadAnimations(xmlFile, key .. ".animationNodes", node.vehicle.components, node.vehicle, node.vehicle.i3dMappings)
     end
+
+    node.lastEffect = node.effects[#node.effects]
 end
 
 ---@param node ProcessorDischargeNode
