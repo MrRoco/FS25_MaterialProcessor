@@ -74,7 +74,7 @@ function SplitProcessor:getIsAvailable()
         if output:getFillPercentage() >= 0.99 then
             local node = self.fillUnitToDischargeNode[output:getFillUnitIndex()]
 
-            if not node:getCanDischargeToObject() and not node:getCanDischargeToGround() then
+            if node == nil or (not node:getCanDischargeToObject() and not node:getCanDischargeToGround()) then
                 return false
             end
         end
