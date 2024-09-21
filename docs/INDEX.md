@@ -7,6 +7,7 @@
 - [Processor types](#processor-types)
   - [Split Processor](#split-processor)
   - [Blend Processor](#blend-processor)
+- [InteractiveControl](#interactivecontrol)
 
 Documentation files:
 - 🗎 [XSD validation schema](./schema/materialProcessor.xsd)
@@ -74,3 +75,12 @@ For implementing a Split Processor [read more here](./PROCESSOR_SPLIT.md).
 Process multiple input fillUnits into one output fillUnit.
 
 For implementing a Blend Processor [read more here](./PROCESSOR_BLEND.md).
+
+## InteractiveControl
+
+When [FS22_interactiveControl](https://www.farming-simulator.com/mod.php?mod_id=259051) mod is active, new IC functions will be available for use:
+
+| Function | Description |
+|----------|-------------|
+| PROCESSOR_CONFIGURATION | Open control panel dialog for changing configuration. |
+| PROCESSOR_TOGGLE_DISCHARGE_GROUND | Toggle discharge to ground. Only applicable for split processor discharge nodes. |

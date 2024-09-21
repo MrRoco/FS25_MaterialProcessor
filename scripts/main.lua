@@ -39,6 +39,7 @@ load('hud/ProcessorHUD.lua')
 
 -- Base game extensions
 load('extensions/GuiOverlayExtension.lua')
+load('extensions/InteractiveControlExtension.lua')
 
 ---@diagnostic disable-next-line: lowercase-global
 g_processorGui = ProcessorGUI.new()
