@@ -54,15 +54,15 @@ vehicle.materialProcessor.configurations.configuration(%)
         <configurations>
             <configuration name="$l10n_myConfigurationName" litersPerSecond="500">
                 <input fillType="DIRT" fillUnitIndex="3">
-                    <ouput fillType="GRAVEL" fillUnitIndex="4" ratio="0.3" />
-                    <ouput fillType="SAND" fillUnitIndex="5" ratio="0.7" />
+                    <output fillType="GRAVEL" fillUnitIndex="4" ratio="0.3" />
+                    <output fillType="SAND" fillUnitIndex="5" ratio="0.7" />
                 </input>
             </configuration>
 
             <configuration name="Filter gravel" litersPerSecond="800">
                 <input fillType="GRAVEL" fillUnitIndex="3">
-                    <ouput fillType="SAND" fillUnitIndex="4" ratio="0.1" />
-                    <ouput fillType="STONE" fillUnitIndex="5" ratio="0.9" />
+                    <output fillType="SAND" fillUnitIndex="4" ratio="0.1" />
+                    <output fillType="STONE" fillUnitIndex="5" ratio="0.9" />
                 </input>
             </configuration>
         </configurations>
