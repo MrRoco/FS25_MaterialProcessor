@@ -69,7 +69,7 @@ function MaterialProcessor.registerEventListeners(vehicleType)
     SpecializationUtil.registerEventListener(vehicleType, 'onUpdate', MaterialProcessor)
     SpecializationUtil.registerEventListener(vehicleType, 'onUpdateTick', MaterialProcessor)
 
-    SpecializationUtil.registerEventListener(vehicleType, 'onRegisterActionEvents', MaterialProcessor)
+    SpecializationUtil.registerEventListener(vehicleType, 'registerActionEvents', MaterialProcessor)
 
     SpecializationUtil.registerEventListener(vehicleType, "onReadStream", MaterialProcessor)
     SpecializationUtil.registerEventListener(vehicleType, "onWriteStream", MaterialProcessor)
@@ -280,12 +280,12 @@ end
 
 ---@param isActiveForInput boolean
 ---@param isActiveForInputIgnoreSelection boolean
-function MaterialProcessor:onRegisterActionEvents(isActiveForInput, isActiveForInputIgnoreSelection)
+function MaterialProcessor:registerActionEvents(isActiveForInput, isActiveForInputIgnoreSelection)
     ---@type MaterialProcessorSpecialization
     local spec = self[MaterialProcessor.SPEC_NAME]
 
     if self.isClient then
-        self:clearActionEventsTable(spec.actionEvents)
+        self:clearActionEvents(spec.actionEvents)
 
         if isActiveForInputIgnoreSelection then
             local _, actionId = self:addActionEvent(spec.actionEvents, InputAction.IMPLEMENT_EXTRA4, self, MaterialProcessor.actionEventOpenDialog, false, true, false, true)
@@ -297,7 +297,7 @@ function MaterialProcessor:onRegisterActionEvents(isActiveForInput, isActiveForI
                 g_inputBinding:setActionEventTextPriority(actionId, GS_PRIO_NORMAL)
             end
 
-            MaterialProcessor.updateActionEvents(self)
+            self:updateActionEvents()
         end
     end
 end
