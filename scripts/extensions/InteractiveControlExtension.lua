@@ -22,7 +22,7 @@ function InteractiveControlExtension.new()
 end
 
 function InteractiveControlExtension:registerFunctions()
-    local modName = 'FS22_interactiveControl'
+    local modName = 'FS25_interactiveControl'
 
     if g_modIsLoaded[modName] then
         local modEnv = _G[modName]
